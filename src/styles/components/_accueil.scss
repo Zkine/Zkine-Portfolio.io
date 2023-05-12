@@ -1,0 +1,19 @@
+.accueil__conteneur {
+    margin-bottom: 130px;
+    background: center / contain no-repeat url("../../assets/Accueilimg.webp");
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+
+    @media only screen and (min-width: 768px) {
+        background: center / contain no-repeat url("../../assets/Accueilimg.webp");
+        margin-bottom: 0px;
+        height: 89vh;
+        padding-top: 0;
+        margin: auto;
+    }
+
+    @media only screen and (min-width: 1215px) {
+        background: center / auto no-repeat url("../../assets/Accueilimg.webp");
+    }
+}

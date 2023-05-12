@@ -1,0 +1,143 @@
+.conteneurcontact {
+    margin-bottom: 130px;
+
+    &__div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        margin: auto;
+        width: 95%;
+        padding: 15px;
+        background-color: #F6F6F6;
+    }
+
+    &__h2 {
+        margin: auto;
+        font-weight: 500;
+    }
+
+    &__form {
+        margin: auto;
+        width: 86.87%;
+    }
+
+    &__formulaire {
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+
+    &__label {
+        margin: 5px;
+    }
+
+    &__nom {
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid;
+        margin: 5px;
+    }
+
+    &__prenom {
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid;
+        margin: 5px;
+
+    }
+
+    &__mail {
+        width: 100%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid;
+        margin: 5px;
+    }
+
+    &__descriptif {
+        width: 100%;
+        height: 125px;
+        border-radius: 5px;
+        resize: none;
+        margin: 5px;
+    }
+
+    &--bouton {
+        width: 50%;
+        border-radius: 10em;
+        background-color: white;
+        box-shadow: 1px 5px 10px 1px RGB(0 0 0 / 35%);
+        background: linear-gradient(to bottom right, lighten(#f5f0e1, 15), lighten(#1e3d59, 10));
+        margin: 10px auto;
+        position: relative;
+        height: 50px;
+        opacity: 1;
+        z-index: 1;
+        border: 1px solid;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            opacity: 0;
+            z-index: -1;
+            background: linear-gradient(to bottom right, lighten(#f5f0e1, 5), lighten(#1e3d59, 5));
+            border-radius: 10em;
+            box-shadow: 0px 2px 10px 1px RGB(0 0 0 / 35%);
+        }
+
+        &:hover,
+        &:active {
+            &::after {
+                opacity: 1;
+                transition: opacity 300ms;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        margin: auto;
+        width: 100%;
+
+        &__div {
+            width: 80%;
+        }
+
+        &__form {
+            width: 66.87%;
+        }
+    }
+
+    @media only screen and (min-width: 962px) {
+
+        &__div {
+            width: 70%;
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+        &__div {
+            width: 60%;
+        }
+    }
+
+    @media only screen and (min-width: 1532px) {
+
+        &__div {
+            width: 50%;
+        }
+    }
+}
+
+.invalid {
+    outline: solid 2px red;
+    border: none;
+}

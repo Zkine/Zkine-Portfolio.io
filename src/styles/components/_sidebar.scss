@@ -1,0 +1,106 @@
+.sidebar_conteneur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1e3d59;
+    height: 330px;
+    width: 100%;
+    margin-bottom: 35px;
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 300px;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    &__li {
+        display: flex;
+    }
+
+    &--button {
+        width: 70%;
+        height: 45px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: auto;
+        font-size: 1.2em;
+        font-weight: 540;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    &__icone {
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        bottom: 0%;
+        width: 100%;
+        background-color: #ff6e40;
+    }
+
+    &__linkedin {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 45px;
+        color: black;
+        margin: 25px;
+    }
+
+    &__github {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-size: 45px;
+        color: black;
+    }
+
+    @media only screen and (min-width: 768px) {
+        justify-content: space-evenly;
+        height: 89vh;
+        width: 280px;
+        border-radius: 0 10px 0 0;
+        margin-bottom: 0px;
+
+        &__menu {
+            height: 300px;
+        }
+
+        &__icone {
+            display: flex;
+            justify-content: space-around;
+            position: static;
+            background-color: #1e3d59;
+        }
+    }
+}
+
+.rotate {
+    transform: rotate(0deg);
+
+    @media only screen and (min-width: 768px) {
+        transform: rotate(-90deg);
+    }
+}
+
+.rotateinit {
+    transform: rotate(180deg);
+
+    @media only screen and (min-width: 768px) {
+        transform: rotate(0deg);
+    }
+}

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../../fonts/Roboto-Regular-webfont.woff") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Shrikhand";
+    src: url("../../fonts/Shrikhand-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+H1,
+H2,
+H3,
+img {
+    font-family: "Shrikhand", Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}

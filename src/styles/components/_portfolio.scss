@@ -1,0 +1,61 @@
+.portfolio__conteneur {
+    width: 100%;
+    display: flex;
+    margin-bottom: 130px;
+
+    &__element {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, auto);
+        border: 2px solid #000;
+        border-radius: 10px;
+        gap: 10px;
+        grid-auto-flow: dense;
+        width: 95%;
+        background-color: #F6F6F6;
+        margin: auto;
+    }
+
+    &__section {
+        align-self: center;
+        justify-self: center;
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    @media only screen and (min-width: 679px) {
+
+        &__element {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, auto);
+        }
+    }
+
+    @media only screen and (min-width: 768px) {
+        width: 100%;
+        margin-bottom: 0px;
+
+        &__element {
+            height: 70%;
+        }
+    }
+
+    @media only screen and (min-width: 868px) {
+
+        &__element {
+            height: auto;
+        }
+    }
+
+
+
+    @media only screen and (min-width: 1592px) {
+        &__element {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            width: 75.713%;
+        }
+    }
+}
