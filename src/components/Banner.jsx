@@ -8,31 +8,34 @@ export default function Banner({ sidebarOpen, updateSidebar }) {
     const styleClass = e.target;
 
     setTimeout(() => {
-      if (sidebarOpen === false) {
-        const stlyleButtonAccueil =
+      if (
+        window.matchMedia("(min-width: 768px)").matches &&
+        sidebarOpen === false
+      ) {
+        const stlylebuttonaccueil =
           e.target.parentNode.parentNode.parentNode.childNodes[2].childNodes[0]
             .childNodes[0].childNodes[0].childNodes[0].childNodes[0]
             .childNodes[0].childNodes[1];
-        stlyleButtonAccueil.classList.add("rotate");
+        stlylebuttonaccueil.classList.add("rotate");
       } else if (
         window.matchMedia("(max-width: 768px)").matches &&
         sidebarOpen === false
       ) {
-        const stlyleButtonPortfolio =
+        const stlylebuttonportfolio =
           e.target.parentNode.parentNode.parentNode.childNodes[2].childNodes[0]
             .childNodes[0].childNodes[0].childNodes[0].childNodes[1]
             .childNodes[0].childNodes[1];
-        const stlyleButtonApropos =
+        const stlylebuttonapropos =
           e.target.parentNode.parentNode.parentNode.childNodes[2].childNodes[0]
             .childNodes[0].childNodes[0].childNodes[0].childNodes[2]
             .childNodes[0].childNodes[1];
-        const stlyleButtonContact =
+        const stlylebuttoncontact =
           e.target.parentNode.parentNode.parentNode.childNodes[2].childNodes[0]
             .childNodes[0].childNodes[0].childNodes[0].childNodes[3]
             .childNodes[0].childNodes[1];
-        stlyleButtonPortfolio.classList.add("rotateinit");
-        stlyleButtonApropos.classList.add("rotateinit");
-        stlyleButtonContact.classList.add("rotateinit");
+        stlylebuttonportfolio.classList.add("rotateinit");
+        stlylebuttonapropos.classList.add("rotateinit");
+        stlylebuttoncontact.classList.add("rotateinit");
       }
     }, 0);
 

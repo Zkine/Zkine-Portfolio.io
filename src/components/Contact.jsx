@@ -111,12 +111,7 @@ export default function Contact({ contactOpen }) {
       <section className="conteneurcontact">
         <div className="conteneurcontact__div">
           <h2 className="conteneurcontact__h2">Me conctacter</h2>
-          <form
-            action="mailto:philippe_jaymes@hotmail.com"
-            method="get"
-            enctype="text/plain"
-            className="conteneurcontact__form"
-          >
+          <form className="conteneurcontact__form">
             <p className="conteneurcontact__formulaire">
               <label className="conteneurcontact__label">
                 Nom :
@@ -192,7 +187,6 @@ export default function Contact({ contactOpen }) {
                 type="submit"
                 onClick={validate}
                 className="conteneurcontact--bouton"
-                value="Send"
               >
                 Envoyer
               </Button>
