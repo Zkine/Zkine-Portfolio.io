@@ -111,9 +111,13 @@ export default function Contact({ contactOpen }) {
       <section className="conteneurcontact">
         <div className="conteneurcontact__div">
           <h2 className="conteneurcontact__h2">Me conctacter</h2>
-          <form className="conteneurcontact__form">
+          <form
+            method="POST"
+            action="http://localhost:3030/api/message"
+            className="conteneurcontact__form"
+          >
             <p className="conteneurcontact__formulaire">
-              <label className="conteneurcontact__label">
+              <label for="nom" className="conteneurcontact__label">
                 Nom :
                 <input
                   type="text"
@@ -132,7 +136,7 @@ export default function Contact({ contactOpen }) {
                   </span>
                 )}
               </label>
-              <label className="conteneurcontact__label">
+              <label for="prenom" className="conteneurcontact__label">
                 Prénom :
                 <input
                   type="text"
@@ -151,12 +155,12 @@ export default function Contact({ contactOpen }) {
                   </span>
                 )}
               </label>
-              <label className="conteneurcontact__label">
+              <label for="email" className="conteneurcontact__label">
                 Email :
                 <input
                   type="email"
-                  name="mail"
-                  id="mail"
+                  name="email"
+                  id="email"
                   className="conteneurcontact__mail"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -168,7 +172,7 @@ export default function Contact({ contactOpen }) {
                 )}
               </label>
               <br />
-              <label className="conteneurcontact__label">
+              <label for="descriptif" className="conteneurcontact__label">
                 Descriptif de votre demande (Ajoutez autant de détails que
                 nécessaire):
                 <textarea
