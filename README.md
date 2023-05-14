@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Backend:
+
+1.Ce diriger vers le dossier backend: cd backend
+
+2. installer les dépendances : npm install
+
+3. lancer le serveur: nodemon server
+
+Fortend:
+
+1. installer les dépendances : npm install
+
+2. lancer le serveur: yarn start
