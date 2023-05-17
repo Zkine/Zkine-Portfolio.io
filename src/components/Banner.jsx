@@ -1,5 +1,6 @@
 import "../stylecss/css/style.css";
 import Button from "./Button";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Banner({ sidebarOpen, updateSidebar }) {
   function selected(e) {
@@ -51,7 +52,7 @@ export default function Banner({ sidebarOpen, updateSidebar }) {
       <section className="banner">
         <h1 className="banner__titre">Philippe JAYMES - Portfolio</h1>
         <Button className="banner--button" onClick={(e) => selected(e)}>
-          Menu
+          <RxHamburgerMenu className="banner--button__icone" />
         </Button>
       </section>
     </header>

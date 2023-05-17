@@ -25,7 +25,7 @@
         width: 100%;
     }
 
-    @media only screen and (min-width: 679px) {
+    @media only screen and (min-width: 679px) and (pointer: fine) {
 
         &__element {
             grid-template-columns: repeat(2, 1fr);
@@ -33,7 +33,7 @@
         }
     }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) and (pointer: fine) {
         width: 100%;
         margin-bottom: 0px;
 
@@ -42,7 +42,7 @@
         }
     }
 
-    @media only screen and (min-width: 868px) {
+    @media only screen and (min-width: 868px) and (pointer: fine) {
 
         &__element {
             height: auto;
@@ -51,7 +51,7 @@
 
 
 
-    @media only screen and (min-width: 1592px) {
+    @media only screen and (min-width: 1592px) and (pointer: fine) {
         &__element {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, auto);

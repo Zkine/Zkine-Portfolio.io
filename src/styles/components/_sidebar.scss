@@ -32,6 +32,8 @@
         align-items: center;
         justify-content: space-around;
         position: relative;
+        background-color: #71d9e0;
+        border: none;
 
         &::after {
             content: "";
@@ -69,7 +71,7 @@
         color: black;
     }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) and (pointer: fine) {
         justify-content: space-evenly;
         height: 89vh;
         width: 280px;
@@ -92,7 +94,7 @@
 .rotate {
     transform: rotate(0deg);
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) and (pointer: fine) {
         transform: rotate(-90deg);
     }
 }
@@ -100,7 +102,7 @@
 .rotateinit {
     transform: rotate(180deg);
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) and (pointer: fine) {
         transform: rotate(0deg);
     }
 }

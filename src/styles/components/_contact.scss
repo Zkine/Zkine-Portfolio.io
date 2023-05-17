@@ -103,7 +103,7 @@
         }
     }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) and (pointer: fine) {
         margin: auto;
         width: 100%;
 
@@ -116,14 +116,14 @@
         }
     }
 
-    @media only screen and (min-width: 962px) {
+    @media only screen and (min-width: 962px) and (pointer: fine) {
 
         &__div {
             width: 70%;
         }
     }
 
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: 1200px) and (pointer: fine) {
 
         &__div {
             width: 60%;

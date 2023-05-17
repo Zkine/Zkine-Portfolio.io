@@ -71,7 +71,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Backend:
 
-1.Ce diriger vers le dossier backend: cd backend
+1. ce diriger vers le dossier backend: cd backend
 
 2. installer les dépendances : npm install
 

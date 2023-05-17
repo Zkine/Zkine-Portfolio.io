@@ -34,7 +34,7 @@ p {
   justify-content: flex-end;
   flex-direction: column;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (pointer: fine) {
   .main__conteneur {
     flex-direction: row;
   }
@@ -47,24 +47,35 @@ p {
   width: 100%;
   padding: 0 10px;
   height: 11vh;
-  border-bottom: 2px solid #000;
   position: relative;
-  background-color: #f5f0e1;
+  background-color: #DDD0C8;
+}
+.banner:hover {
+  z-index: 1;
+  transition: 350ms ease-in-out;
+  opacity: 0.8;
 }
 .banner__titre {
   font-size: 1.2em;
   margin-right: 35px;
   font-weight: 500;
+  margin: 0;
 }
 .banner--button {
-  font-size: 1.7em;
   cursor: pointer;
   position: relative;
-  border-radius: 10%;
-  background-color: #ff6e40;
+  border-radius: 10px;
   border: none;
   opacity: 1;
   z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #178582;
+  box-shadow: 1px 3px 5px 1px RGB(0 0 0/35%);
+  width: 35px;
+  height: 35px;
+  margin-left: 15px;
 }
 .banner--button::after {
   content: "";
@@ -74,38 +85,55 @@ p {
   bottom: 0;
   left: 0;
   cursor: pointer;
-  border-radius: 10%;
+  border-radius: 10px 10px;
   opacity: 0;
   z-index: -1;
-  box-shadow: 3px 3px 0px rgb(0, 0, 0);
-  background: linear-gradient(to bottom right, #ff815a, #244a6c);
+}
+.banner--button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 .banner--button:hover::after {
   opacity: 1;
   transition: opacity 300ms;
+  background-color: #DDD0C8;
 }
-@media only screen and (min-width: 456px) {
+.banner--button__icone {
+  height: 42px;
+  width: 100%;
+}
+@media only screen and (min-width: 456px) and (pointer: fine) {
   .banner {
     padding: 0 50px;
   }
   .banner__titre {
     font-size: 1.7em;
   }
+  .banner--button {
+    width: 55px;
+    height: 55px;
+  }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (pointer: fine) {
   .banner__titre {
     font-size: 2.3em;
   }
   .banner--button {
-    font-size: 2.3em;
+    width: 75px;
+    height: 75px;
   }
 }
-@media only screen and (min-width: 990px) {
+@media only screen and (min-width: 990px) and (pointer: fine) {
   .banner {
     padding: 0 100px;
   }
 }
-@media only screen and (min-width: 1288px) {
+@media only screen and (min-width: 1288px) and (pointer: fine) {
   .banner {
     padding: 0 150px;
   }
@@ -115,11 +143,9 @@ p {
   font-size: 1.7em;
   cursor: pointer;
   position: relative;
-  border-radius: 10%;
+  border-radius: 10px 10px;
   border: none;
   transition: opacity 300ms;
-  background-color: #316492;
-  box-shadow: 4px 4px 0px rgb(0, 0, 0);
   position: relative;
   border: none;
   opacity: 1;
@@ -133,16 +159,15 @@ p {
   bottom: 0;
   left: 0;
   cursor: pointer;
-  border-radius: 10%;
+  border-radius: 10px 10px;
   opacity: 0;
   z-index: -1;
-  background: linear-gradient(to bottom right, #ff815a, #244a6c);
 }
 .active:hover::after {
   opacity: 1;
   transition: opacity 300ms;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (pointer: fine) {
   .active {
     font-size: 2.3em;
   }
@@ -180,6 +205,8 @@ p {
   align-items: center;
   justify-content: space-around;
   position: relative;
+  background-color: #71d9e0;
+  border: none;
 }
 .sidebar_conteneur--button::after {
   content: "";
@@ -212,7 +239,7 @@ p {
   font-size: 45px;
   color: black;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (pointer: fine) {
   .sidebar_conteneur {
     justify-content: space-evenly;
     height: 89vh;
@@ -234,7 +261,7 @@ p {
 .rotate {
   transform: rotate(0deg);
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (pointer: fine) {
   .rotate {
     transform: rotate(-90deg);
   }
@@ -243,164 +270,33 @@ p {
 .rotateinit {
   transform: rotate(180deg);
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (pointer: fine) {
   .rotateinit {
     transform: rotate(0deg);
   }
 }
 
 .loading_spinner {
-  background-color: #f5f0e1;
+  background: linear-gradient(100deg, #1e3d59 50%, #ffffff 50%);
   position: fixed;
   z-index: 3;
   width: 100%;
   height: 100%;
+  color: white;
   display: flex;
-  animation: loader 6500ms both;
-}
-.loading_spinner__conteneur {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.loading_spinner__rideau1 {
-  width: 20%;
-  border-radius: 0 0 50em 50em;
-  position: absolute;
-  background-color: gray;
-  animation: rideau 3000ms 3500ms ease;
-  z-index: 2;
-}
-.loading_spinner__rideau2 {
-  width: 20%;
-  position: absolute;
-  left: 20%;
-  border-radius: 0 0 50em 50em;
-  overflow: hidden;
-  background-color: gray;
-  animation: rideau 3000ms 3500ms ease;
-  z-index: 2;
-}
-.loading_spinner__rideau3 {
-  width: 20%;
-  left: 40%;
-  border-radius: 0 0 50em 50em;
-  position: absolute;
-  overflow: hidden;
-  background-color: gray;
-  animation: rideau 3000ms 3500ms ease;
-  z-index: 2;
-}
-.loading_spinner__rideau4 {
-  width: 20%;
-  left: 60%;
-  border-radius: 0 0 50em 50em;
-  position: absolute;
-  overflow: hidden;
-  background-color: gray;
-  animation: rideau 3000ms 3500ms ease;
-  z-index: 2;
-}
-.loading_spinner__rideau5 {
-  width: 20%;
-  left: 80%;
-  border-radius: 0 0 50em 50em;
-  position: absolute;
-  overflow: hidden;
-  background-color: gray;
-  animation: rideau 3000ms 3500ms ease;
-  z-index: 2;
-}
-.loading_spinner__animationtitre {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  width: 65%;
-  height: 80%;
+  animation: loader 4000ms both;
 }
 .loading_spinner__titre {
   font-size: 2em;
-  font-family: "Roboto";
   z-index: 1;
   font-weight: 600;
+  margin: auto;
+  letter-spacing: 3px;
 }
 .loading_spinner__img {
-  width: auto;
-}
-.loading_spinner__conteneurchargement {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-.loading_spinner--lettre {
-  font-family: "Shrikhand";
-  font-size: 1.5em;
-  font-weight: 900;
-  animation: loader_chargement 2500ms linear both;
-  z-index: 1;
-}
-.loading_spinner--lettre:nth-child(1) {
-  animation-delay: 0.0555555556s;
-}
-.loading_spinner--lettre:nth-child(2) {
-  animation-delay: 0.1111111111s;
-}
-.loading_spinner--lettre:nth-child(3) {
-  animation-delay: 0.1666666667s;
-}
-.loading_spinner--lettre:nth-child(4) {
-  animation-delay: 0.2222222222s;
-}
-.loading_spinner--lettre:nth-child(5) {
-  animation-delay: 0.2777777778s;
-}
-.loading_spinner--lettre:nth-child(6) {
-  animation-delay: 0.3333333333s;
-}
-.loading_spinner--lettre:nth-child(7) {
-  animation-delay: 0.3888888889s;
-}
-.loading_spinner--lettre:nth-child(8) {
-  animation-delay: 0.4444444444s;
-}
-.loading_spinner--lettre:nth-child(9) {
-  animation-delay: 0.5s;
-}
-.loading_spinner--lettre:nth-child(10) {
-  animation-delay: 0.5555555556s;
-  margin-right: 5px;
-}
-.loading_spinner--lettre:nth-child(11) {
-  animation-delay: 0.6111111111s;
-}
-.loading_spinner--lettre:nth-child(12) {
-  animation-delay: 0.6666666667s;
-  margin-right: 5px;
-}
-.loading_spinner--lettre:nth-child(13) {
-  animation-delay: 0.7222222222s;
-}
-.loading_spinner--lettre:nth-child(14) {
-  animation-delay: 0.7777777778s;
-  margin-right: 5px;
-}
-.loading_spinner--lettre:nth-child(15) {
-  animation-delay: 0.8333333333s;
-}
-.loading_spinner--lettre:nth-child(16) {
-  animation-delay: 0.8888888889s;
-}
-.loading_spinner--lettre:nth-child(17) {
-  animation-delay: 0.9444444444s;
-}
-.loading_spinner--lettre:nth-child(18) {
-  animation-delay: 1s;
+  width: 300px;
+  height: 386px;
+  margin: auto;
 }
 
 .accueil__conteneur {
@@ -410,7 +306,7 @@ p {
   height: 0;
   padding-top: 100%;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (pointer: fine) {
   .accueil__conteneur {
     background: center/contain no-repeat url("../../assets/Accueilimg.webp");
     margin-bottom: 0px;
@@ -419,7 +315,7 @@ p {
     margin: auto;
   }
 }
-@media only screen and (min-width: 1215px) {
+@media only screen and (min-width: 1215px) and (pointer: fine) {
   .accueil__conteneur {
     background: center/auto no-repeat url("../../assets/Accueilimg.webp");
   }
@@ -449,13 +345,13 @@ p {
 .portfolio__conteneur__img {
   width: 100%;
 }
-@media only screen and (min-width: 679px) {
+@media only screen and (min-width: 679px) and (pointer: fine) {
   .portfolio__conteneur__element {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (pointer: fine) {
   .portfolio__conteneur {
     width: 100%;
     margin-bottom: 0px;
@@ -464,12 +360,12 @@ p {
     height: 70%;
   }
 }
-@media only screen and (min-width: 868px) {
+@media only screen and (min-width: 868px) and (pointer: fine) {
   .portfolio__conteneur__element {
     height: auto;
   }
 }
-@media only screen and (min-width: 1592px) {
+@media only screen and (min-width: 1592px) and (pointer: fine) {
   .portfolio__conteneur__element {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
@@ -501,7 +397,7 @@ p {
   border-radius: 50%;
   margin: auto;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (pointer: fine) {
   .conteneurabout {
     width: 100%;
     margin-bottom: 0px;
@@ -520,7 +416,7 @@ p {
     width: 100%;
   }
 }
-@media only screen and (min-width: 962px) {
+@media only screen and (min-width: 962px) and (pointer: fine) {
   .conteneurabout__div {
     flex-flow: row nowrap;
   }
@@ -532,12 +428,12 @@ p {
     width: 95%;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) and (pointer: fine) {
   .conteneurabout__div {
     width: 95%;
   }
 }
-@media only screen and (min-width: 1532px) {
+@media only screen and (min-width: 1532px) and (pointer: fine) {
   .conteneurabout__div {
     width: 65.713%;
   }
@@ -635,7 +531,7 @@ p {
   opacity: 1;
   transition: opacity 300ms;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (pointer: fine) {
   .conteneurcontact {
     margin: auto;
     width: 100%;
@@ -647,12 +543,12 @@ p {
     width: 66.87%;
   }
 }
-@media only screen and (min-width: 962px) {
+@media only screen and (min-width: 962px) and (pointer: fine) {
   .conteneurcontact__div {
     width: 70%;
   }
 }
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) and (pointer: fine) {
   .conteneurcontact__div {
     width: 60%;
   }
@@ -670,36 +566,20 @@ p {
 
 @keyframes loader {
   0% {
-    opacity: 1;
+    left: 0px;
+    opacity: 2;
+    z-index: 3;
   }
-  90%, 99% {
-    opacity: 1;
-    z-index: 2;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
-}
-@keyframes loader_chargement {
-  0% {
-    color: black;
-  }
-  90%, 99% {
-    color: rgb(199, 200, 236);
-    opacity: 1;
+  50% {
+    left: 0px;
+    opacity: 2;
+    z-index: 3;
+    left: 0px;
   }
   100% {
-    color: black;
-  }
-}
-@keyframes rideau {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100%;
-    border-radius: 0 0 0em 0em;
+    left: 3000px;
+    opacity: 2;
+    z-index: 1;
   }
 }
 

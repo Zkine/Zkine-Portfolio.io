@@ -5,25 +5,37 @@
     width: 100%;
     padding: 0 10px;
     height: 11vh;
-    border-bottom: 2px solid #000;
     position: relative;
-    background-color: #f5f0e1;
+    background-color: #DDD0C8;
+
+    &:hover {
+        z-index: 1;
+        transition: 350ms ease-in-out;
+        opacity: 0.8;
+    }
 
     &__titre {
         font-size: 1.2em;
         margin-right: 35px;
         font-weight: 500;
+        margin: 0;
     }
 
     &--button {
-        font-size: 1.7em;
         cursor: pointer;
         position: relative;
-        border-radius: 10%;
-        background-color: #ff6e40;
+        border-radius: 10px;
         border: none;
         opacity: 1;
         z-index: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #178582;
+        box-shadow: 1px 3px 5px 1px RGB(0 0 0 / 35%);
+        width: 35px;
+        height: 35px;
+        margin-left: 15px;
 
         &::after {
             content: "";
@@ -33,46 +45,66 @@
             bottom: 0;
             left: 0;
             cursor: pointer;
-            border-radius: 10%;
+            border-radius: 10px 10px;
             opacity: 0;
             z-index: -1;
-            box-shadow: 3px 3px 0px rgba(0, 0, 0);
-            background: linear-gradient(to bottom right, lighten(#ff6e40, 5), lighten(#1e3d59, 5));
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
         }
 
         &:hover {
             &::after {
                 opacity: 1;
                 transition: opacity 300ms;
+                background-color: #DDD0C8;
             }
+        }
+
+        &__icone {
+            height: 42px;
+            width: 100%;
         }
     }
 
 
 
-    @media only screen and (min-width: 456px) {
+    @media only screen and (min-width: 456px) and (pointer: fine) {
         padding: 0 50px;
 
         &__titre {
             font-size: 1.7em;
         }
+
+        &--button {
+            width: 55px;
+            height: 55px;
+        }
     }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) and (pointer: fine) {
         &__titre {
             font-size: 2.3em;
         }
 
         &--button {
-            font-size: 2.3em;
+            width: 75px;
+            height: 75px;
         }
     }
 
-    @media only screen and (min-width: 990px) {
+    @media only screen and (min-width: 990px) and (pointer: fine) {
         padding: 0 100px;
     }
 
-    @media only screen and (min-width: 1288px) {
+    @media only screen and (min-width: 1288px) and (pointer: fine) {
         padding: 0 150px;
     }
 }
@@ -81,11 +113,9 @@
     font-size: 1.7em;
     cursor: pointer;
     position: relative;
-    border-radius: 10%;
+    border-radius: 10px 10px;
     border: none;
     transition: opacity 300ms;
-    background-color: lighten(#1e3d59, 15);
-    box-shadow: 4px 4px 0px rgba(0, 0, 0);
     position: relative;
     border: none;
     opacity: 1;
@@ -99,10 +129,9 @@
         bottom: 0;
         left: 0;
         cursor: pointer;
-        border-radius: 10%;
+        border-radius: 10px 10px;
         opacity: 0;
         z-index: -1;
-        background: linear-gradient(to bottom right, lighten(#ff6e40, 5), lighten(#1e3d59, 5));
     }
 
     &:hover {
@@ -112,7 +141,7 @@
         }
     }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) and (pointer: fine) {
         font-size: 2.3em;
     }
 }

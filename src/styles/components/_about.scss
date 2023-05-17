@@ -25,7 +25,7 @@
         margin: auto;
     }
 
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 768px) and (pointer: fine) {
         width: 100%;
         margin-bottom: 0px;
 
@@ -46,7 +46,7 @@
         }
     }
 
-    @media only screen and (min-width: 962px) {
+    @media only screen and (min-width: 962px) and (pointer: fine) {
 
         &__div {
             flex-flow: row nowrap;
@@ -62,14 +62,14 @@
         }
     }
 
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: 1200px) and (pointer: fine) {
 
         &__div {
             width: 95%;
         }
     }
 
-    @media only screen and (min-width: 1532px) {
+    @media only screen and (min-width: 1532px) and (pointer: fine) {
 
         &__div {
             width: 65.713%;
