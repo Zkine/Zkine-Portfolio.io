@@ -92,7 +92,6 @@ export default function Contact({ contactOpen }) {
 
   function handleBlurDescription(e) {
     const inputColorDescription = e.target.form[3];
-    console.log(inputColorDescription);
     if (
       !regExpDescription.test(description) &&
       !inputColorDescription.classList.contains("invalid")
@@ -117,7 +116,7 @@ export default function Contact({ contactOpen }) {
             className="conteneurcontact__form"
           >
             <p className="conteneurcontact__formulaire">
-              <label for="nom" className="conteneurcontact__label">
+              <label htmlFor="nom" className="conteneurcontact__label">
                 Nom :
                 <input
                   type="text"
@@ -136,7 +135,7 @@ export default function Contact({ contactOpen }) {
                   </span>
                 )}
               </label>
-              <label for="prenom" className="conteneurcontact__label">
+              <label htmlFor="prenom" className="conteneurcontact__label">
                 Prénom :
                 <input
                   type="text"
@@ -155,7 +154,7 @@ export default function Contact({ contactOpen }) {
                   </span>
                 )}
               </label>
-              <label for="email" className="conteneurcontact__label">
+              <label htmlFor="email" className="conteneurcontact__label">
                 Email :
                 <input
                   type="email"
@@ -172,7 +171,7 @@ export default function Contact({ contactOpen }) {
                 )}
               </label>
               <br />
-              <label for="descriptif" className="conteneurcontact__label">
+              <label htmlFor="descriptif" className="conteneurcontact__label">
                 Descriptif de votre demande (Ajoutez autant de détails que
                 nécessaire):
                 <textarea

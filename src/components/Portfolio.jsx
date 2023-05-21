@@ -9,7 +9,7 @@ export default function Portfolio({ portfolioOpen }) {
           {portfoliolist.map((portfolio) => (
             <div className="portfolio__conteneur__section" key={portfolio.id}>
               <a rel="noreferrer" href={portfolio.href} target="_blank">
-                <figure>
+                <figure className="portfolio__conteneur__figure">
                   <img
                     src={portfolio.src}
                     alt={portfolio.alt}

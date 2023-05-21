@@ -8,10 +8,26 @@
     position: relative;
     background-color: #DDD0C8;
 
-    &:hover {
-        z-index: 1;
-        transition: 350ms ease-in-out;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: -1;
         opacity: 0.8;
+        background-color: lighten(#DDD0C8, 5);
+        box-shadow: inset 0px -2px 3px -1px rgba(0, 0, 0, 0.5);
+    }
+
+    &:hover,
+    &:active {
+        &::after {
+            z-index: 0;
+            opacity: 0.4;
+        }
     }
 
     &__titre {
@@ -19,6 +35,7 @@
         margin-right: 35px;
         font-weight: 500;
         margin: 0;
+        z-index: 1;
     }
 
     &--button {
@@ -31,11 +48,11 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        background-color: #178582;
+        background-color: #3d99be;
         box-shadow: 1px 3px 5px 1px RGB(0 0 0 / 35%);
-        width: 35px;
-        height: 35px;
-        margin-left: 15px;
+        width: 45px;
+        height: 45px;
+        margin: 0 5px 0 15px;
 
         &::after {
             content: "";
@@ -64,7 +81,7 @@
             &::after {
                 opacity: 1;
                 transition: opacity 300ms;
-                background-color: #DDD0C8;
+                background: linear-gradient(270deg, #3d99be 0%, #3ab5b0 100%);
             }
         }
 
@@ -86,6 +103,7 @@
         &--button {
             width: 55px;
             height: 55px;
+            margin: 0 0px 0 15px;
         }
     }
 
@@ -120,6 +138,7 @@
     border: none;
     opacity: 1;
     z-index: 1;
+    background-color: #3ab5b0;
 
     &::after {
         content: "";

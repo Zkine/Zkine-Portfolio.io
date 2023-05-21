@@ -6,11 +6,10 @@
         display: flex;
         flex-direction: column-reverse;
         width: 95%;
-        background-color: #F6F6F6;
+        background-image: linear-gradient(180deg, #fdfbfb 0%, #ebedee 100%);
         padding: 0 10px;
         border-radius: 10px;
         font-size: 1em;
-        border: 1px solid #000000;
         margin: auto;
     }
 
@@ -47,7 +46,6 @@
     }
 
     @media only screen and (min-width: 962px) and (pointer: fine) {
-
         &__div {
             flex-flow: row nowrap;
         }
@@ -63,14 +61,12 @@
     }
 
     @media only screen and (min-width: 1200px) and (pointer: fine) {
-
         &__div {
-            width: 95%;
+            width: 75%;
         }
     }
 
     @media only screen and (min-width: 1532px) and (pointer: fine) {
-
         &__div {
             width: 65.713%;
         }

@@ -8,43 +8,49 @@ export default function Banner({ sidebarOpen, updateSidebar }) {
 
     const styleClass = e.target;
 
-    setTimeout(() => {
-      if (
-        window.matchMedia("(min-width: 768px)").matches &&
-        sidebarOpen === false
-      ) {
-        const stlylebuttonaccueil =
-          e.target.parentNode.parentNode.parentNode.childNodes[2].childNodes[0]
-            .childNodes[0].childNodes[0].childNodes[0].childNodes[0]
-            .childNodes[0].childNodes[1];
-        stlylebuttonaccueil.classList.add("rotate");
-      } else if (
-        window.matchMedia("(max-width: 768px)").matches &&
-        sidebarOpen === false
-      ) {
-        const stlylebuttonportfolio =
-          e.target.parentNode.parentNode.parentNode.childNodes[2].childNodes[0]
-            .childNodes[0].childNodes[0].childNodes[0].childNodes[1]
-            .childNodes[0].childNodes[1];
-        const stlylebuttonapropos =
-          e.target.parentNode.parentNode.parentNode.childNodes[2].childNodes[0]
-            .childNodes[0].childNodes[0].childNodes[0].childNodes[2]
-            .childNodes[0].childNodes[1];
-        const stlylebuttoncontact =
-          e.target.parentNode.parentNode.parentNode.childNodes[2].childNodes[0]
-            .childNodes[0].childNodes[0].childNodes[0].childNodes[3]
-            .childNodes[0].childNodes[1];
-        stlylebuttonportfolio.classList.add("rotateinit");
-        stlylebuttonapropos.classList.add("rotateinit");
-        stlylebuttoncontact.classList.add("rotateinit");
-      }
-    }, 0);
-
     if (!styleClass.classList.contains("active")) {
       styleClass.classList.add("active");
     } else {
       styleClass.classList.remove("active");
     }
+
+    setTimeout(() => {
+      const styleClassAccueil =
+        e.target.parentNode.parentNode.parentNode.childNodes[2].childNodes[0]
+          .childNodes[0].childNodes[0].childNodes[0].childNodes[0]
+          .childNodes[0];
+      if (
+        window.matchMedia("(min-width: 768px)").matches &&
+        sidebarOpen === false
+      ) {
+        const stlyleArrowAccueil =
+          e.target.parentNode.parentNode.parentNode.childNodes[2].childNodes[0]
+            .childNodes[0].childNodes[0].childNodes[0].childNodes[0]
+            .childNodes[0].childNodes[1];
+        stlyleArrowAccueil.classList.add("rotate");
+        styleClassAccueil.classList.add("button");
+      } else if (
+        window.matchMedia("(max-width: 768px)").matches &&
+        sidebarOpen === false
+      ) {
+        const stlyleArrowPortfolio =
+          e.target.parentNode.parentNode.parentNode.childNodes[2].childNodes[0]
+            .childNodes[0].childNodes[0].childNodes[0].childNodes[1]
+            .childNodes[0].childNodes[1];
+        const stlyleArrowApropos =
+          e.target.parentNode.parentNode.parentNode.childNodes[2].childNodes[0]
+            .childNodes[0].childNodes[0].childNodes[0].childNodes[2]
+            .childNodes[0].childNodes[1];
+        const stlyleArrowContact =
+          e.target.parentNode.parentNode.parentNode.childNodes[2].childNodes[0]
+            .childNodes[0].childNodes[0].childNodes[0].childNodes[3]
+            .childNodes[0].childNodes[1];
+        stlyleArrowPortfolio.classList.add("rotateinit");
+        stlyleArrowApropos.classList.add("rotateinit");
+        stlyleArrowContact.classList.add("rotateinit");
+        styleClassAccueil.classList.add("button");
+      }
+    }, 10);
   }
 
   return (

@@ -7,12 +7,11 @@
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(6, auto);
-        border: 2px solid #000;
         border-radius: 10px;
         gap: 10px;
         grid-auto-flow: dense;
         width: 95%;
-        background-color: #F6F6F6;
+        background-image: linear-gradient(180deg, #fdfbfb 0%, #ebedee 100%);
         margin: auto;
     }
 
@@ -21,12 +20,20 @@
         justify-self: center;
     }
 
+    &__figure {
+        display: inline-block;
+        position: relative;
+    }
+
     &__img {
         width: 100%;
+
+        &:hover {
+            outline: solid 2px rgb(110, 172, 108);
+        }
     }
 
     @media only screen and (min-width: 679px) and (pointer: fine) {
-
         &__element {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, auto);
@@ -43,13 +50,10 @@
     }
 
     @media only screen and (min-width: 868px) and (pointer: fine) {
-
         &__element {
             height: auto;
         }
     }
-
-
 
     @media only screen and (min-width: 1592px) and (pointer: fine) {
         &__element {

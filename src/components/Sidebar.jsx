@@ -21,7 +21,24 @@ export default function Sidebar({
   });
 
   function selectedAccueil(e) {
-    const addclick = e.target.childNodes[0].data;
+    const addClick = e.target.childNodes[0].data;
+    const styleClassButton = e.target;
+    const styleClassRemoveAccueil =
+      e.target.parentElement.parentNode.childNodes[0].childNodes[0];
+    const styleClassRemovePortfolio =
+      e.target.parentElement.parentNode.childNodes[1].childNodes[0];
+    const styleClassRemoveApropos =
+      e.target.parentElement.parentNode.childNodes[2].childNodes[0];
+    const styleClassRemoveContact =
+      e.target.parentElement.parentNode.childNodes[3].childNodes[0];
+
+    if (!styleClassButton.classList.contains("button")) {
+      styleClassRemoveAccueil.classList.remove("button");
+      styleClassRemovePortfolio.classList.remove("button");
+      styleClassRemoveApropos.classList.remove("button");
+      styleClassRemoveContact.classList.remove("button");
+      styleClassButton.classList.add("button");
+    }
 
     const arrowaccueil =
       e.target.parentNode.parentNode.children[0].childNodes[0].childNodes[1];
@@ -32,7 +49,7 @@ export default function Sidebar({
     const arrowcontact =
       e.target.parentNode.parentNode.children[3].childNodes[0].childNodes[1];
 
-    if (!arrowaccueil.classList.contains("rotate") && addclick === "Accueil") {
+    if (!arrowaccueil.classList.contains("rotate") && addClick === "Accueil") {
       arrowaccueil.classList.remove("rotateinit");
       arrowaccueil.classList.add("rotate");
       arrowportefolio.classList.remove("rotate");
@@ -47,7 +64,7 @@ export default function Sidebar({
       updateContact(false);
     } else if (
       !arrowportefolio.classList.contains("rotate") &&
-      addclick === "Portfolio"
+      addClick === "Portfolio"
     ) {
       arrowportefolio.classList.remove("rotateinit");
       arrowportefolio.classList.add("rotate");
@@ -63,7 +80,7 @@ export default function Sidebar({
       updateContact(false);
     } else if (
       !arrowabout.classList.contains("rotate") &&
-      addclick === "À propos"
+      addClick === "À propos"
     ) {
       arrowabout.classList.remove("rotateinit");
       arrowabout.classList.add("rotate");
@@ -79,7 +96,7 @@ export default function Sidebar({
       updateContact(false);
     } else if (
       !arrowcontact.classList.contains("rotate") &&
-      addclick === "Contact"
+      addClick === "Contact"
     ) {
       arrowcontact.classList.remove("rotateinit");
       arrowcontact.classList.add("rotate");
