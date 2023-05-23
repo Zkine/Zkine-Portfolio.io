@@ -109,7 +109,7 @@ export default function Contact({ contactOpen }) {
     contactOpen && (
       <section className="conteneurcontact">
         <div className="conteneurcontact__div">
-          <h2 className="conteneurcontact__h2">Me conctacter</h2>
+          <h2 className="conteneurcontact__h2">Me contacter</h2>
           <form
             method="POST"
             action="http://localhost:3030/api/message"

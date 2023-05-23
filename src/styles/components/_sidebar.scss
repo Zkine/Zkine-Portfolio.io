@@ -32,7 +32,7 @@
         align-items: center;
         justify-content: space-around;
         position: relative;
-        background-image: linear-gradient(to right, #3d99be 31%, #56317a 100%);
+        background-image: linear-gradient(to right, #3d99be 31%, #7a6f31 100%);
         border: none;
         z-index: 1;
 
@@ -58,12 +58,11 @@
             bottom: 0;
             z-index: -1;
             opacity: 0;
-            background-image: linear-gradient(to right, lighten(#3d99be, 5) 19%, lighten(#56317a, 5) 87%, lighten(#317a5c, 15) 100%);
+            background-image: linear-gradient(to right, lighten(#3d99be, 5) 19%, lighten(#7a6f31, 5) 87%, lighten(#317a5c, 15) 100%);
             box-shadow: 0px 2px 10px 1px RGB(0 0 0 / 35%);
         }
 
-        &:not(.button):hover,
-        &:active {
+        &:not(.button):hover {
             &::after {
                 opacity: 1;
                 transition: all 1500ms cubic-bezier(0.19, 1, 0.22, 1);
