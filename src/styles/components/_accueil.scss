@@ -36,4 +36,8 @@
             width: 100%;
         }
     }
+
+    @media only screen and (max-width: 1082px) and (orientation: landscape) and (pointer: fine) {
+        margin-bottom: 130px;
+    }
 }

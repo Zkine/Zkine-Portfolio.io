@@ -66,6 +66,15 @@
         }
     }
 
+    @media only screen and (max-width: 1082px) and (orientation: landscape) and (pointer: fine) {
+        margin-bottom: 130px;
+
+        &__div {
+            flex-direction: column-reverse;
+            width: 95%;
+        }
+    }
+
     @media only screen and (min-width: 1532px) and (pointer: fine) {
         &__div {
             width: 65.713%;

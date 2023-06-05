@@ -55,6 +55,15 @@
         }
     }
 
+    @media only screen and (max-width: 1082px) and (orientation: landscape) and (pointer: fine) {
+        margin-bottom: 130px;
+
+        &__element {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(6, auto);
+        }
+    }
+
     @media only screen and (min-width: 1592px) and (pointer: fine) {
         &__element {
             grid-template-columns: repeat(3, 1fr);

@@ -139,6 +139,10 @@
         }
     }
 
+    @media only screen and (max-width: 1082px) and (orientation: landscape) and (pointer: fine) {
+        margin-bottom: 130px;
+    }
+
     @media only screen and (min-width: 1200px) and (pointer: fine) {
         &__div {
             width: 60%;
