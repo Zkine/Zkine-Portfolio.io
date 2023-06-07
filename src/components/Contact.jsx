@@ -14,29 +14,27 @@ export default function Contact({ contactOpen }) {
   const [isDescriptionError, setDescriptionError] = useState(false);
 
   const validate = (e) => {
+    e.preventDefault();
+
     if (!regExpNomPrenom.test(nom)) {
-      e.preventDefault();
       setNomError(true);
     } else if (regExpNomPrenom.test(nom)) {
       setNomError(false);
     }
 
     if (!regExpNomPrenom.test(premon)) {
-      e.preventDefault();
       setPremonError(true);
     } else if (regExpNomPrenom.test(premon)) {
       setPremonError(false);
     }
 
     if (!regExpEmail.test(email)) {
-      e.preventDefault();
       setEmailError(true);
     } else if (regExpEmail.test(email)) {
       setEmailError(false);
     }
 
     if (!regExpDescription.test(description)) {
-      e.preventDefault();
       setDescriptionError(true);
     } else if (regExpDescription.test(description)) {
       setDescriptionError(false);
@@ -44,66 +42,6 @@ export default function Contact({ contactOpen }) {
       alert("Votre message a bien été envoyé");
     }
   };
-
-  function handleBlurNom(e) {
-    const inputColorNom = e.target.form[0];
-    if (
-      !regExpNomPrenom.test(nom) &&
-      !inputColorNom.classList.contains("invalid")
-    ) {
-      inputColorNom.classList.add("invalid");
-    } else if (
-      regExpNomPrenom.test(nom) &&
-      inputColorNom.classList.contains("invalid")
-    ) {
-      inputColorNom.classList.remove("invalid");
-    }
-  }
-
-  function handleBlurPrenom(e) {
-    const inputColorPrenom = e.target.form[1];
-    if (
-      !regExpNomPrenom.test(premon) &&
-      !inputColorPrenom.classList.contains("invalid")
-    ) {
-      inputColorPrenom.classList.add("invalid");
-    } else if (
-      regExpNomPrenom.test(premon) &&
-      inputColorPrenom.classList.contains("invalid")
-    ) {
-      inputColorPrenom.classList.remove("invalid");
-    }
-  }
-
-  function handleBlurMail(e) {
-    const inputColorMail = e.target.form[2];
-    if (
-      !regExpEmail.test(email) &&
-      !inputColorMail.classList.contains("invalid")
-    ) {
-      inputColorMail.classList.add("invalid");
-    } else if (
-      regExpEmail.test(email) &&
-      inputColorMail.classList.contains("invalid")
-    ) {
-      inputColorMail.classList.remove("invalid");
-    }
-  }
-
-  function handleBlurDescription(e) {
-    const inputColorDescription = e.target.form[3];
-    if (
-      !regExpDescription.test(description) &&
-      !inputColorDescription.classList.contains("invalid")
-    ) {
-      inputColorDescription.classList.add("invalid");
-    } else if (
-      regExpDescription.test(description) &&
-      inputColorDescription.classList.contains("invalid")
-    ) {
-      inputColorDescription.classList.remove("invalid");
-    }
-  }
 
   return (
     contactOpen && (
@@ -122,10 +60,13 @@ export default function Contact({ contactOpen }) {
                   type="text"
                   name="nom"
                   id="nom"
-                  className="conteneurcontact__nom"
+                  className={[
+                    !regExpNomPrenom.test(nom) && nom !== ""
+                      ? "invalid"
+                      : "conteneurcontact__imput",
+                  ]}
                   value={nom}
                   onChange={(e) => setNom(e.target.value)}
-                  onBlur={handleBlurNom}
                   required
                 />
                 {isNomError && (
@@ -141,10 +82,13 @@ export default function Contact({ contactOpen }) {
                   type="text"
                   name="prenom"
                   id="prenom"
-                  className="conteneurcontact__prenom"
+                  className={[
+                    !regExpNomPrenom.test(premon) && premon !== ""
+                      ? "invalid"
+                      : "conteneurcontact__imput",
+                  ]}
                   value={premon}
                   onChange={(e) => setPremon(e.target.value)}
-                  onBlur={handleBlurPrenom}
                   required
                 />
                 {isPremonError && (
@@ -160,10 +104,13 @@ export default function Contact({ contactOpen }) {
                   type="email"
                   name="email"
                   id="email"
-                  className="conteneurcontact__mail"
+                  className={[
+                    !regExpEmail.test(email) && email !== ""
+                      ? "invalid"
+                      : "conteneurcontact__imput",
+                  ]}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  onBlur={handleBlurMail}
                   required
                 />
                 {isEmailError && (
@@ -177,9 +124,13 @@ export default function Contact({ contactOpen }) {
                 <textarea
                   name="descriptif"
                   id="descriptif"
-                  className="conteneurcontact__descriptif"
+                  className={[
+                    !regExpDescription.test(description) && description !== ""
+                      ? "invaliddes"
+                      : "conteneurcontact__descriptif",
+                  ]}
+                  value={description}
                   onChange={(e) => setDescription(e.target.value)}
-                  onBlur={handleBlurDescription}
                   required
                 ></textarea>
                 {isDescriptionError && (

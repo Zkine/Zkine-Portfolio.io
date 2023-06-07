@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Normalize from "react-normalize";
 import "../stylecss/css/style.css";
 import Spinner from "./Spinner";

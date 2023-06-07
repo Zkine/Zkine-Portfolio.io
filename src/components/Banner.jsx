@@ -5,7 +5,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react";
 
 export default function Banner({ sidebarOpen, updateSidebar }) {
-  const [clickBanner, setclickBanner] = useState();
+  const [clickBanner, setclickBanner] = useState(false);
 
   function selected() {
     setclickBanner(!clickBanner);

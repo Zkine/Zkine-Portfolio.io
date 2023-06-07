@@ -30,26 +30,33 @@ export default function Sidebar({
 
   function selectedAccueil(id) {
     setclickButtonSidebar(id);
-    if (id === "1bu") {
-      updateAccueil(true);
-      updatePortefolio(false);
-      updateAbout(false);
-      updateContact(false);
-    } else if (id === "2bu") {
-      updateAccueil(false);
-      updatePortefolio(true);
-      updateAbout(false);
-      updateContact(false);
-    } else if (id === "3bu") {
-      updatePortefolio(false);
-      updateAccueil(false);
-      updateAbout(true);
-      updateContact(false);
-    } else if (id === "4bu") {
-      updateAccueil(false);
-      updatePortefolio(false);
-      updateAbout(false);
-      updateContact(true);
+    switch (id) {
+      case "1bu":
+        updateAccueil(true);
+        updatePortefolio(false);
+        updateAbout(false);
+        updateContact(false);
+        break;
+      case "2bu":
+        updateAccueil(false);
+        updatePortefolio(true);
+        updateAbout(false);
+        updateContact(false);
+        break;
+      case "3bu":
+        updatePortefolio(false);
+        updateAccueil(false);
+        updateAbout(true);
+        updateContact(false);
+        break;
+      case "4bu":
+        updateAccueil(false);
+        updatePortefolio(false);
+        updateAbout(false);
+        updateContact(true);
+        break;
+      default:
+        console.log("Button sans state");
     }
   }
 
@@ -67,8 +74,7 @@ export default function Sidebar({
                       ? "button"
                       : "sidebar_conteneur--button",
                   ]}
-                  onClick={(e) => {
-                    e.stopPropagation();
+                  onClick={() => {
                     selectedAccueil(id);
                   }}
                 >

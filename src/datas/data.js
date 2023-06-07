@@ -14,7 +14,8 @@ export const regExpNomPrenom = new RegExp("^[a-zA-Z]{2,}$");
 export const regExpEmail = new RegExp(
   "^[a-z0-9.-_]+[@]{1}[a-z0-9.-_]+[.]{1}[a-z]{2,4}$"
 );
-export const regExpDescription = new RegExp("^[a-zA-Z0-9.-_,:) ]{15,}$");
+// eslint-disable-next-line no-control-regex
+export const regExpDescription = new RegExp("^([a-zA-Z0-9.-_,:) \n]){65,}$");
 
 // Tableau objet qui incrémente la page Portfolio
 export const portfoliolist = [
