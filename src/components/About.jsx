@@ -27,10 +27,10 @@ export default function Contact({ aboutOpen }) {
               communiquant avec les API Flech pour gagner en rapidité, surtout
               dans le monde d'aujourd'hui où l'information recherchée doit être
               disponible quasi instantanément. Utiliser le framework React qui
-              est l’un des frameworks JavaScript les plus vogues pour créer des
-              composants réutilisables et construire le DOM d'une application
-              web &#128526; ainsi que de concevoir la programmation d'un serveur
-              Node.js relié à la base de données MongoDB&#128525;.
+              est l’un des frameworks JavaScript les plus en vogues pour créer
+              des composants réutilisables et construire le DOM d'une
+              application web &#128526; ainsi que de concevoir la programmation
+              d'un serveur Node.js relié à la base de données MongoDB&#128525;.
             </p>
             <p className="conteneurabout__paragraphe">
               En raison de mon parcours professionnel atypique, j'affectionne de
