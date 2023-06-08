@@ -15,7 +15,6 @@ export default function Contact({ contactOpen }) {
 
   const validate = (e) => {
     e.preventDefault();
-
     if (!regExpNomPrenom.test(nom)) {
       setNomError(true);
     } else if (regExpNomPrenom.test(nom)) {
