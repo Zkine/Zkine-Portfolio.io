@@ -81,12 +81,9 @@
         }
     }
 
-    @media only screen and (orientation: landscape) and (pointer: coarse) {
-        min-height: 85px;
-    }
-
     @media only screen and (min-width: 456px) and (pointer: fine) {
         padding: 0 50px;
+        min-height: 95px;
 
         &__titre {
             font-size: 1.9em;
