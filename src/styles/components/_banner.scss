@@ -30,7 +30,7 @@
     }
 
     &__titre {
-        font-size: 1.2em;
+        font-size: 1.5em;
         margin-right: 35px;
         font-weight: 500;
         margin: 0;
@@ -75,34 +75,38 @@
             z-index: 1;
         }
 
-        &:hover {
-            &::after {
-                opacity: 1;
-                transition: opacity 300ms;
-                background: linear-gradient(270deg, #3d99be 0%, #3ab5b0 100%);
-            }
-        }
-
         &__icone {
             height: 42px;
             width: 100%;
         }
     }
 
-
+    @media only screen and (orientation: landscape) and (pointer: coarse) {
+        min-height: 85px;
+    }
 
     @media only screen and (min-width: 456px) and (pointer: fine) {
         padding: 0 50px;
 
         &__titre {
-            font-size: 1.7em;
+            font-size: 1.9em;
         }
 
         &--button {
             width: 55px;
             height: 55px;
             margin: 0 0px 0 15px;
+
+            &:hover {
+                &::after {
+                    opacity: 1;
+                    transition: opacity 300ms;
+                    background: linear-gradient(270deg, #3d99be 0%, #3ab5b0 100%);
+                }
+            }
         }
+
+
     }
 
     @media only screen and (min-width: 768px) and (pointer: fine) {
@@ -157,18 +161,20 @@
         z-index: -1;
     }
 
-    &:hover {
-        &::after {
-            opacity: 1;
-            transition: opacity 300ms;
-            background: linear-gradient(270deg, #3d99be 0%, #3ab5b0 100%);
-        }
-    }
+
 
     @media only screen and (min-width: 456px) and (pointer: fine) {
         width: 55px;
         height: 55px;
         margin: 0 0px 0 15px;
+
+        &:hover {
+            &::after {
+                opacity: 1;
+                transition: opacity 300ms;
+                background: linear-gradient(270deg, #3d99be 0%, #3ab5b0 100%);
+            }
+        }
     }
 
     @media only screen and (min-width: 768px) and (pointer: fine) {
