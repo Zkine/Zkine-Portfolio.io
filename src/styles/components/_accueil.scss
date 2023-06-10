@@ -6,6 +6,7 @@
 
     &__ordi {
         width: 100%;
+        margin: 20px 0 50px 0;
     }
 
     &__imgacc {
@@ -22,8 +23,6 @@
     }
 
     @media only screen and (min-width: 768px) and (pointer: fine) {
-        padding-top: 35px;
-        margin: auto;
 
         &__imgacc {
             margin: auto;
@@ -34,9 +33,5 @@
             justify-content: center;
             width: 100%;
         }
-    }
-
-    @media only screen and (max-width: 1082px) and (orientation: landscape) and (pointer: fine) {
-        margin-bottom: 130px;
     }
 }

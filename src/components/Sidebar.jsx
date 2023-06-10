@@ -57,7 +57,7 @@ export default function Sidebar({
         updateContact(true);
         break;
       default:
-        console.log("Button sans state");
+        throw new Error("Ajoutez un state au nouveau boutton.");
     }
   }
 
