@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ec661a0a.css",
+    "main.js": "/static/js/main.13520bd5.js",
+    "static/media/Shrikhand-Regular.ttf": "/static/media/Shrikhand-Regular.5ff5e889191a6c359fa4.ttf",
+    "static/media/CV_Philippe_JAYMES.pdf": "/static/media/CV_Philippe_JAYMES.6ce53a08df62f24f0a0e.pdf",
+    "static/media/Accueilimg.webp": "/static/media/Accueilimg.2dbabf4f0bc59fcd179f.webp",
+    "static/media/ohmyfood.webp": "/static/media/ohmyfood.f4e7ff7a8dfaf40d0453.webp",
+    "static/media/kasa.webp": "/static/media/kasa.9ee5a049dc94fd22150b.webp",
+    "static/media/brooky.webp": "/static/media/brooky.be04d2f30a68c63e6f5e.webp",
+    "static/media/Roboto-Regular-webfont.woff": "/static/media/Roboto-Regular-webfont.ccc2dd0b454fbaab2a3c.woff",
+    "static/media/kanap.webp": "/static/media/kanap.1cbdf029e5797f44f57c.webp",
+    "static/media/la_panthère.webp": "/static/media/la_panthère.028492d35254fdeab13f.webp",
+    "static/media/la_piiquante.webp": "/static/media/la_piiquante.a285f7b726e4dc863eb1.webp",
+    "static/media/imgphilippe.webp": "/static/media/imgphilippe.bd565ececc8e2c24b16d.webp",
+    "static/media/NODEJS.webp": "/static/media/NODEJS.2d582157f238bcfd166f.webp",
+    "static/media/REACTJS.webp": "/static/media/REACTJS.73ae22455009182e6037.webp",
+    "static/media/HTML5.webp": "/static/media/HTML5.02b7439cb3f51682d5ae.webp",
+    "static/media/SASS.webp": "/static/media/SASS.cacb67d8ea89ebbce307.webp",
+    "static/media/CSS3.webp": "/static/media/CSS3.3692e312c11dadfd7c96.webp",
+    "static/media/JS.webp": "/static/media/JS.ff174b3174e5c0663194.webp",
+    "index.html": "/index.html",
+    "main.ec661a0a.css.map": "/static/css/main.ec661a0a.css.map",
+    "main.13520bd5.js.map": "/static/js/main.13520bd5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec661a0a.css",
+    "static/js/main.13520bd5.js"
+  ]
+}

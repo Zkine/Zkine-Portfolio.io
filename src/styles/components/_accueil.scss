@@ -4,6 +4,12 @@
     justify-content: space-around;
     margin-bottom: 130px;
 
+    &__figure {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
     &__ordi {
         width: 100%;
         margin: 20px 0 50px 0;
@@ -12,6 +18,8 @@
     &__imgacc {
         width: 100%;
         margin: 30px auto;
+        display: flex;
+        align-items: center;
     }
 
     &__logo {
@@ -28,11 +36,27 @@
         &__imgacc {
             margin: auto;
         }
+    }
+
+    @media only screen and (max-height: 832px) and (orientation: landscape) and (pointer: fine) {
+        &__imgacc {
+            width: 80%;
+        }
+    }
+
+    @media only screen and (min-width: 851px) and (orientation: landscape) and (pointer: fine) {
+        margin-bottom: 130px;
+    }
+
+    @media only screen and (min-width: 1083px) and (orientation: landscape) and (pointer: fine) {
+        margin-bottom: 0px;
 
         &__logo {
-            display: flex;
-            justify-content: center;
-            width: 100%;
+            flex-flow: row nowrap;
+        }
+
+        &__ordi {
+            margin: 20px 0 0px 0;
         }
     }
 }

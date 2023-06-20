@@ -11,7 +11,7 @@ export default function Accueil({ accueilOpen }) {
   return (
     accueilOpen && (
       <div className="accueil__conteneur">
-        <figure>
+        <figure className="accueil__conteneur__figure">
           <div className="accueil__conteneur__ordi">
             <img
               src={accueilimg}
