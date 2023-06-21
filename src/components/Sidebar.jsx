@@ -29,7 +29,6 @@ export default function Sidebar({
   ]);
 
   function selectedAccueil(id) {
-    console.log("render");
     setclickButtonSidebar(id);
     switch (id) {
       case "1bu":

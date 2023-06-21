@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-around;
     margin-bottom: 130px;
+    padding: 0 20px;
 
     &__figure {
         margin: auto;
@@ -17,7 +18,7 @@
 
     &__imgacc {
         width: 100%;
-        margin: 30px auto;
+        margin: auto;
         display: flex;
         align-items: center;
     }
@@ -32,10 +33,6 @@
 
     @media only screen and (min-width: 768px) and (pointer: fine) {
         margin-bottom: 0px;
-
-        &__imgacc {
-            margin: auto;
-        }
     }
 
     @media only screen and (max-height: 832px) and (orientation: landscape) and (pointer: fine) {
@@ -49,14 +46,15 @@
     }
 
     @media only screen and (min-width: 1083px) and (orientation: landscape) and (pointer: fine) {
-        margin-bottom: 0px;
+        margin-bottom: 0;
+        height: 88vh;
 
         &__logo {
             flex-flow: row nowrap;
         }
 
         &__ordi {
-            margin: 20px 0 0px 0;
+            margin: 20px 0 0 0;
         }
     }
 }
