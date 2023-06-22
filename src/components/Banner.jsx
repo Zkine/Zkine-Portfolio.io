@@ -7,7 +7,9 @@ import { useState } from "react";
 export default function Banner({ sidebarOpen, updateSidebar }) {
   const [clickBanner, setclickBanner] = useState(false);
 
-  function selected() {
+  function selected(element) {
+    let pressed = element.currentTarget.getAttribute("aria-pressed") === "true";
+    element.currentTarget.setAttribute("aria-pressed", !pressed);
     setclickBanner(!clickBanner);
     updateSidebar(!sidebarOpen);
   }
@@ -17,7 +19,8 @@ export default function Banner({ sidebarOpen, updateSidebar }) {
       <section className="banner">
         <h1 className="banner__titre">Philippe JAYMES - Portfolio</h1>
         <Button
-          aria-label="Button_menu"
+          aria-haspopup="menu"
+          aria-pressed="false"
           className={[clickBanner ? "active" : "banner--button"]}
           onClick={(e) => selected(e)}
         >
