@@ -14,6 +14,7 @@ export default function Accueil({ accueilOpen }) {
         <figure className="accueil__conteneur__figure">
           <div className="accueil__conteneur__ordi">
             <img
+              rel="preload"
               src={accueilimg}
               alt="ordinateur portable"
               className="accueil__conteneur__imgacc"
@@ -21,31 +22,37 @@ export default function Accueil({ accueilOpen }) {
           </div>
           <div className="accueil__conteneur__logo">
             <img
+              rel="preload"
               src={html}
               alt="logo HTML5"
               className="accueil__conteneur__img"
             />
             <img
+              rel="preload"
               src={react}
               alt="logo react"
               className="accueil__conteneur__img"
             />
             <img
+              rel="preload"
               src={css}
               alt="logo CSS3"
               className="accueil__conteneur__img"
             />
             <img
+              rel="preload"
               src={scss}
               alt="logo sass"
               className="accueil__conteneur__img"
             />
             <img
+              rel="preload"
               src={js}
               alt="logo javascript"
               className="accueil__conteneur__img"
             />
             <img
+              rel="preload"
               src={nodejs}
               alt="logo NODEJS"
               className="accueil__conteneur__img"

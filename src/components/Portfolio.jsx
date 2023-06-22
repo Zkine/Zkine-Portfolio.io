@@ -11,6 +11,7 @@ export default function Portfolio({ portfolioOpen }) {
               <a rel="noreferrer" href={portfolio.href} target="_blank">
                 <figure className="portfolio__conteneur__figure">
                   <img
+                    loading="lazy"
                     src={portfolio.src}
                     alt={portfolio.alt}
                     className="portfolio__conteneur__img"

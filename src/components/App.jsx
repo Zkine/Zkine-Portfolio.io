@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import Normalize from "react-normalize";
 import "../stylecss/css/style.css";
 import Spinner from "./Spinner";
-import Banner from "./Banner";
-import Sidebar from "./Sidebar";
-import Accueil from "./Accueil";
-import Portfolio from "./Portfolio";
-import About from "./About";
-import Contact from "./Contact";
-import { useState, useEffect } from "react";
+const Banner = lazy(() => delayLoader(import("./Banner.jsx")));
+const Sidebar = lazy(() => delayLoader(import("./Sidebar.jsx")));
+const Accueil = lazy(() => delayLoader(import("./Accueil.jsx")));
+const Portfolio = lazy(() => import("./Portfolio.jsx"));
+const About = lazy(() => import("./About.jsx"));
+const Contact = lazy(() => import("./Contact.jsx"));
 
 export default function App() {
   const [sidebarOpen, updateSidebar] = useState(false);
@@ -32,23 +31,30 @@ export default function App() {
   return (
     <>
       <Normalize />
-      <Spinner />
-      <Banner sidebarOpen={sidebarOpen} updateSidebar={updateSidebar} />
-      <main className="main">
-        <article className="main__conteneur">
-          <Sidebar
-            sidebarOpen={sidebarOpen}
-            updateAccueil={updateAccueil}
-            updatePortefolio={updatePortefolio}
-            updateAbout={updateAbout}
-            updateContact={updateContact}
-          />
-          <Accueil accueilOpen={accueilOpen} />
-          <Portfolio portfolioOpen={portfolioOpen} />
-          <About aboutOpen={aboutOpen} />
-          <Contact contactOpen={contactOpen} />
-        </article>
-      </main>
+      <Suspense fallback={<Spinner />}>
+        <Banner sidebarOpen={sidebarOpen} updateSidebar={updateSidebar} />
+        <main className="main">
+          <article className="main__conteneur">
+            <Sidebar
+              sidebarOpen={sidebarOpen}
+              updateAccueil={updateAccueil}
+              updatePortefolio={updatePortefolio}
+              updateAbout={updateAbout}
+              updateContact={updateContact}
+            />
+            <Accueil accueilOpen={accueilOpen} />
+            <Portfolio portfolioOpen={portfolioOpen} />
+            <About aboutOpen={aboutOpen} />
+            <Contact contactOpen={contactOpen} />
+          </article>
+        </main>
+      </Suspense>
     </>
   );
+}
+
+function delayLoader(promise) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, 2500);
+  }).then(() => promise);
 }
