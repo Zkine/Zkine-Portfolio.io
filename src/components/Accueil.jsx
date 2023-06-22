@@ -40,7 +40,6 @@ export default function Accueil({ accueilOpen }) {
               className="accueil__conteneur__img"
             />
             <img
-              rel="preload"
               src={scss}
               alt="logo sass"
               className="accueil__conteneur__img"

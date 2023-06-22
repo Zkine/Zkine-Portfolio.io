@@ -19,8 +19,8 @@ export default function Banner({ sidebarOpen, updateSidebar }) {
       <section className="banner">
         <h1 className="banner__titre">Philippe JAYMES - Portfolio</h1>
         <Button
-          aria-haspopup="menu"
-          aria-pressed="false"
+          ariaLabel="Menu"
+          ariaPressed="false"
           className={[clickBanner ? "active" : "banner--button"]}
           onClick={(e) => selected(e)}
         >

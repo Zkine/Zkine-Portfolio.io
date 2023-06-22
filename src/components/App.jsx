@@ -2,12 +2,12 @@ import React, { useState, useEffect, Suspense, lazy } from "react";
 import Normalize from "react-normalize";
 import "../stylecss/css/style.css";
 import Spinner from "./Spinner";
-const Banner = lazy(() => delayLoader(import("./Banner.jsx")));
-const Sidebar = lazy(() => delayLoader(import("./Sidebar.jsx")));
-const Accueil = lazy(() => delayLoader(import("./Accueil.jsx")));
-const Portfolio = lazy(() => import("./Portfolio.jsx"));
-const About = lazy(() => import("./About.jsx"));
-const Contact = lazy(() => import("./Contact.jsx"));
+const Banner = lazy(() => delayLoader(import("./Banner")));
+const Sidebar = lazy(() => import("./Sidebar"));
+const Accueil = lazy(() => import("./Accueil"));
+const Portfolio = lazy(() => import("./Portfolio"));
+const About = lazy(() => import("./About"));
+const Contact = lazy(() => import("./Contact"));
 
 export default function App() {
   const [sidebarOpen, updateSidebar] = useState(false);
