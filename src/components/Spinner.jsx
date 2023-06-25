@@ -8,7 +8,6 @@ export default function Spinner() {
         Bienvenue sur <br className="loading_spinner__br" /> mon portfolio !
       </h1>
       <img
-        rel="preload"
         src={Philippe}
         alt="Portrait de Philippe JAYMES"
         className="loading_spinner__img"
