@@ -7,6 +7,7 @@
 
 # testing
 /coverage
+index.test.js
 
 # production
 /build

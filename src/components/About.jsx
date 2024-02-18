@@ -35,9 +35,7 @@ export default function Contact({ aboutOpen }) {
             <p className="conteneurabout__paragraphe">
               En raison de mon parcours professionnel atypique, j'affectionne de
               me former à de nouveaux langages et d'accomplir une veille
-              informationnelle dans le domaine de l'informatique. J'ai le goût
-              de la rigueur, du travailler bien fait et du management d'une
-              équipe&#128522;.
+              informationnelle dans le domaine de l'informatique&#128522;.
             </p>
             <p>
               Mon curriculum vitae est téléchargeable en cliquant sur le lien
